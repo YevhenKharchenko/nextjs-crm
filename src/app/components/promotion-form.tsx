@@ -53,8 +53,8 @@ export default function PromotionForm({ companyId, onSubmit }: PromotionFormProp
     await mutateAsync({
       ...values,
       discount: Number(values.discount) || 0,
-      companyId: company.id,
-      companyTitle: company.title,
+      companyId: company?.id || '',
+      companyTitle: company?.title || '',
     });
 
     if (onSubmit) {
