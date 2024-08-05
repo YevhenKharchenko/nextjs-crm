@@ -14,7 +14,7 @@ export interface StatusLabelProps {
   disabled?: boolean;
 }
 
-const StatusLabel = ({ children, status, disabled }: StatusLabelProps) => {
+export default function StatusLabel({ children, status, disabled }: StatusLabelProps) {
   return (
     <div
       className={clsx(
@@ -24,7 +24,7 @@ const StatusLabel = ({ children, status, disabled }: StatusLabelProps) => {
         status === Status.Pending && 'text-orange-700 bg-orange-100',
         status === Status.Suspended && 'text-blue-700 bg-blue-100',
         {
-          ['placeholder-opacity-75 cursor-not-allowed']: disabled,
+          ['opacity-75 cursor-not-allowed']: disabled,
         },
       )}
     >
@@ -32,6 +32,4 @@ const StatusLabel = ({ children, status, disabled }: StatusLabelProps) => {
       {children}
     </div>
   );
-};
-
-export default StatusLabel;
+}

@@ -1,6 +1,4 @@
-import { headers } from 'next/headers';
-import StatusLabel, { Status } from './components/status-label';
-import AddCompanyButton from './components/add-company-button';
+import AddCompanyButton from '@/app/components/add-company-button';
 
 export default function Home() {
   return (
